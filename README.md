@@ -35,5 +35,5 @@ Our main sponsor is Surf.
 [Mikhail Zotyev](https://github.com/MbIXjkee)
 
 ## AutoTests for UserProfile
-The examples folder contains the directories of the created autotests script, integration_test, test_screen. The following directories have been created in the integration_test folder: features (it contains the profile functionality), step_definitions (it contains the user's steps in the form of fields for implementing the profile functionality, as well as validation of these fields). The logic of writing autotests has also been created (gherkin_suite.test.dart).The test_screen folder contains locators for testing.
+The examples folder contains the directories of the created autotests: script, integration_test, test_screen. The following directories have been created in the integration_test folder: features (it contains the profile functionality), step_definitions (it contains the user's steps in the form of fields for implementing the profile functionality, as well as validation of these fields). The logic of writing autotests has also been created (gherkin_suite.test.dart).The test_screen folder contains locators for testing.
 
