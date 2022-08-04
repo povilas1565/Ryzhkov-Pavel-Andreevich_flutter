@@ -5,6 +5,7 @@ import 'package:profile/runner.dart' as app;
 import 'package:surf_logger/surf_logger.dart';
 
 import 'step_definitions/main_step_definitions.dart';
+import 'step_definitions/next_step_click_definitions.dart';
 import 'step_definitions/profile_step_definitions.dart';
 
 part 'gherkin_suite_test.g.dart';
@@ -31,6 +32,7 @@ void main() {
       stepDefinitions: [
         ...MainStepDefinitions.steps,
         ...ProfileStepDefinitions.steps,
+        ...NextStepClickDefinitions.steps
       ],
     ),
     appMainFunction: (world) => app.run(),

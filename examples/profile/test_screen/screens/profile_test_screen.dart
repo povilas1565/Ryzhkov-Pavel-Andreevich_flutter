@@ -1,5 +1,4 @@
 import 'package:flutter_test/flutter_test.dart';
-
 import 'general_test_screen.dart';
 
 abstract class ProfileTestScreen {
@@ -17,7 +16,7 @@ abstract class ProfileTestScreen {
 
   /// поле Далее на экране персональных данных
 
-  static Finder nextField = GeneralTestScreen.textField('Next');
+  static Finder nextStepBtn = GeneralTestScreen.textField('Next');
 
   /// поле Country на экране персональных данных
   static Finder countryField = GeneralTestScreen.textField('Country');

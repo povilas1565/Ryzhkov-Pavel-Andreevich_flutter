@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gherkin/flutter_gherkin.dart';
 import 'package:gherkin/gherkin.dart';
-
 import '../../test_screen/screens/profile_test_screen.dart';
-import '../../test_screen/screens/main_test_screen.dart';
+
 
 abstract class ProfileStepDefinitions {
-  static Iterable<StepDefinitionGeneric> get steps => [
+  static Iterable<StepDefinitionGeneric> get steps =>
+      [
         when1<String, FlutterWidgetTesterWorld>(
           RegExp(r'Я указываю фамилию {string}$'),
-          (surname, context) async {
+              (surname, context) async {
             final tester = context.world.rawAppDriver;
             await tester.pumpAndSettle();
             await tester.enterText(ProfileTestScreen.surnameField, surname);
@@ -18,7 +18,7 @@ abstract class ProfileStepDefinitions {
         ),
         when1<String, FlutterWidgetTesterWorld>(
           RegExp(r'Я указываю дату рождения {string}$'),
-          (birthdate, context) async {
+              (birthdate, context) async {
             final tester = context.world.rawAppDriver;
             await tester.pumpAndSettle();
             tester
@@ -28,6 +28,7 @@ abstract class ProfileStepDefinitions {
             await tester.pump();
           },
         ),
+
         when1<String, FlutterWidgetTesterWorld>(
           RegExp(r'Я указываю имя {string}$'),
               (name, context) async {
@@ -38,97 +39,54 @@ abstract class ProfileStepDefinitions {
           },
         ),
 
-    when1<String, FlutterWidgetTesterWorld>(
-      RegExp(r'Я указываю отчество {string}$'),
-          (patronymic, context) async {
-        final tester = context.world.rawAppDriver;
-        await tester.pumpAndSettle();
-        await tester.enterText(ProfileTestScreen.patronymicField, patronymic);
-        await tester.pump();
-      },
-    ),
+        when1<String, FlutterWidgetTesterWorld>(
+          RegExp(r'Я указываю отчество {string}$'),
+              (patronymic, context) async {
+            final tester = context.world.rawAppDriver;
+            await tester.pumpAndSettle();
+            await tester.enterText(
+                ProfileTestScreen.patronymicField, patronymic);
+            await tester.pump();
+          },
+        ),
 
-    when1<String, FlutterWidgetTesterWorld>(
-      RegExp(r'Я перехожу далее$'),
-          (next, context) async {
-        final tester = context.world.rawAppDriver;
-        await tester.tap(profileTestScreen.nextField);
-        tester
-            .widget<TextField>(ProfileTestScreen.nextField)
-            .controller
-            ?.text = next;
-        await tester.pump();
-      },
-    ),
+        when1<String, FlutterWidgetTesterWorld>(
+          RegExp(r'Я указываю город {string}$'),
+              (country, context) async {
+            final tester = context.world.rawAppDriver;
+            await tester.pumpAndSettle();
+            tester
+                .widget<TextField>(ProfileTestScreen.countryField)
+                .controller
+                ?.text = country;
+            await tester.pump();
+          },
+        ),
 
-    when1<String, FlutterWidgetTesterWorld>(
-      RegExp(r'Я указываю город {string}$'),
-          (country, context) async {
-        final tester = context.world.rawAppDriver;
-        await tester.pumpAndSettle();
-        tester
-            .widget<TextField>(ProfileTestScreen.countryField)
-            .controller
-            ?.text = country;
-        await tester.pump();
-      },
-    ),
 
-    when1<String, FlutterWidgetTesterWorld>(
-      RegExp(r'Я перехожу далее$'),
-          (next, context) async {
-        final tester = context.world.rawAppDriver;
-        await tester.tap(ProfileTestScreen.nextField);
-        tester
-            .widget<TextField>(ProfileTestScreen.nextField)
-            .controller
-            ?.text = next;
-        await tester.pump();
-      },
-    ),
+        when1<String, FlutterWidgetTesterWorld>(
+          RegExp(r'Я выбираю Интересы {string}$'),
+              (interests, context) async {
+            final tester = context.world.rawAppDriver;
+            await tester.pumpAndSettle();
+            tester
+                .widget<TextField>(ProfileTestScreen.interestsField)
+                .controller
+                ?.text = interests;
+            await tester.pump();
+          },
+        ),
 
-    when1<String, FlutterWidgetTesterWorld>(
-      RegExp(r'Я выбираю Интересы {string}$'),
-          (interests, context) async {
-        final tester = context.world.rawAppDriver;
-        await tester.pumpAndSettle();
-        tester
-            .widget<TextField>(ProfileTestScreen.interestsField)
-            .controller
-            ?.text = interests;
-        await tester.pump();
-      },
-    ),
 
-    when1<String, FlutterWidgetTesterWorld>(
-      RegExp(r'Я перехожу далее$'),
-          (next, context) async {
-        final tester = context.world.rawAppDriver;
-        await tester.tap(ProfileTestScreen.nextField);
-        tester
-            .widget<TextField>(ProfileTestScreen.nextField)
-            .controller
-            ?.text = next;
-        await tester.pump();
-      },
-    ),
+        when1<String, FlutterWidgetTesterWorld>(
+          RegExp(r'Я оставляю заметку о себе {string}$'),
+              (bio, context) async {
+            final tester = context.world.rawAppDriver;
+            await tester.pumpAndSettle();
+            await tester.enterText(ProfileTestScreen.bioField, bio);
+            await tester.pump();
+          },
+        ),
 
-    when1<String, FlutterWidgetTesterWorld>(
-      RegExp(r'Я оставляю заметку о себе {string}$'),
-          (bio, context) async {
-        final tester = context.world.rawAppDriver;
-        await tester.pumpAndSettle();
-        await tester.enterText(ProfileTestScreen.bioField, bio);
-        await tester.pump();
-      },
-    ),
-
-    when<FlutterWidgetTesterWorld>(
-      RegExp(r'Я перехожу к редактированию профиля$'),
-          (context) async {
-        final tester = context.world.rawAppDriver;
-        await tester.tap(MainTestScreen.editProfileBtn);
-      },
-    ),
-  ];
+      ];
 }
