@@ -1,5 +1,4 @@
 // ignore_for_file: unused_import
-
 import 'dart:html';
 import 'package:flutter/material.dart';
 import 'package:flutter_gherkin/flutter_gherkin.dart';
@@ -7,16 +6,18 @@ import 'package:gherkin/gherkin.dart';
 
 import '../../test_screen/screens/profile_test_screen.dart';
 
- class ProfileTestScreen extends StatefulWidget {
-  ProfileTestScreen createState() {
-    return new ProfileTestScreen();
+class ValidationProfileStepDefinitions extends StatefulWidget {
+  ValidationProfileStepDefinitions createState() {
+    return new ValidationProfileStepDefinitions();
   }
 }
 
 class StatefulWidget {
+  var Text;
 }
 
- class ProfileTestScreen extends State<ProfileTestScreen> {
+
+ abstract class ProfileStepDefinitions extends Iterable<StepDefinitionGeneric> {
   final _text = TextEditingController();
   bool _validate = false;
 
@@ -35,7 +36,6 @@ class StatefulWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text('Error Showed if Field is Empty on Submit button Pressed'),
             TextField(
               controller: _text,
               decoration: InputDecoration(
@@ -53,7 +53,7 @@ class StatefulWidget {
               textColor: Colors.white,
               color: Colors.blueAccent,
             )
-          ],
+        ],
         ),
       ),
     );
@@ -76,18 +76,12 @@ class StatefulWidget {
   Center({required child}) {}
 
   TextField({required controller, required decoration}) {}
-}
-
-class State {
-}
+ }
 
 class Widget {
-   var Text;
+  var Text;
 }
 
 class BuildContext {
 }
-
-
-
 
