@@ -32,7 +32,7 @@ void main() {
       stepDefinitions: [
         ...MainStepDefinitions.steps,
         ...ProfileStepDefinitions.steps,
-        ...NextStepClickDefinitions.steps
+        ...NextStepClickDefinitions.steps,
       ],
     ),
     appMainFunction: (world) => app.run(),

@@ -30,7 +30,7 @@ When(/^Я перехожу далее "([^"]+)"$/) do |arg|
   pending
 end
 
-When(/^Я выбираю интересы "([^"]+)"$/) do |arg|
+When(/^Я выбираю из интересов "Sleep" "([^"]+)"$/) do |arg|
   pending
 end
 
@@ -44,7 +44,56 @@ end
 
 When(/^Я перехожу к редактированию профиля$/) do
   pending
-end
+  end
+
+  When(/^Я вижу заполненные поля ФИО$/) do
+    pending
+  end
+
+  When(/^Я вижу заполненное поле даты рождения$/) do
+    pending
+  end
+
+  When(/^Я перехожу далее "([^"]+)"$/) do |arg|
+    pending
+  end
+
+  When(/^Я вижу заполненное поле города$/) do
+    pending
+  end
+
+  When(/^Я перехожу далее "([^"]+)"$/) do |arg|
+    pending
+  end
+
+  When(/^ Я вижу выбранные интересы$/) do
+    pending
+  end
+
+  When(/^Я перехожу далее "([^"]+)"$/) do |arg|
+    pending
+  end
+
+  When(/^Я вижу заполненное поле заметки о себе$/) do
+    pending
+  end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -51,6 +51,7 @@ abstract class ProfileStepDefinitions {
         ),
 
         when1<String, FlutterWidgetTesterWorld>(
+
           RegExp(r'Я указываю город {string}$'),
               (country, context) async {
             final tester = context.world.rawAppDriver;
@@ -59,13 +60,11 @@ abstract class ProfileStepDefinitions {
                 .widget<TextField>(ProfileTestScreen.countryField)
                 .controller
                 ?.text = country;
-            await tester.pump();
           },
         ),
 
-
         when1<String, FlutterWidgetTesterWorld>(
-          RegExp(r'Я выбираю Интересы {string}$'),
+          RegExp(r'Я выбираю интересы {string}$'),
               (interests, context) async {
             final tester = context.world.rawAppDriver;
             await tester.pumpAndSettle();
@@ -87,6 +86,5 @@ abstract class ProfileStepDefinitions {
             await tester.pump();
           },
         ),
-
       ];
 }
