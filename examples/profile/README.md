@@ -49,3 +49,7 @@ separate widget because it has its own logic regardless of where it is used.
 Widget [FieldWithSuggestions](lib/features/profile/screens/place_residence/widgets/field_with_suggestions_widget/field_with_suggestions_widget.dart)
 has extensive presentation logic and separate business logic that shows suggestions from the
 repository when users enter the name of their city.
+
+## Автотесты для профиля пользоаателя
+Папка profile содержит каталоги созданных автотестов: script, integration_test, test_screen. В папке integration_test были созданы следующие каталоги: features (содержит функциональность профиля), step_definitions (содержит шаги пользователя в виде полей для реализации функциональности профиля, а также проверки этих полей). Также была создана логика написания автотестов (gherkin_suite.test.dart).Папка test_screen содержит локаторы для тестирования.
+
