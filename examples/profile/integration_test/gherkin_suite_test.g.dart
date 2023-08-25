@@ -55,7 +55,7 @@ class _CustomGherkinIntegrationTestRunner extends GherkinIntegrationTestRunner {
               bool skip,
             ) async {
               return await runStep(
-                name: 'И Я указываю фамилию "Voronin"',
+                name: 'И Я указываю фамилию "Semenikhina"',
                 multiLineStrings: <String>[],
                 table: null,
                 dependencies: dependencies,
@@ -67,7 +67,7 @@ class _CustomGherkinIntegrationTestRunner extends GherkinIntegrationTestRunner {
               bool skip,
             ) async {
               return await runStep(
-                name: 'И Я указываю дату рождения "1998-12-31"',
+                name: 'И Я указываю дату рождения "1998-11-14"',
                 multiLineStrings: <String>[],
                 table: null,
                 dependencies: dependencies,
@@ -79,7 +79,7 @@ class _CustomGherkinIntegrationTestRunner extends GherkinIntegrationTestRunner {
               bool skip,
             ) async {
               return await runStep(
-                name: 'И Я указываю имя "Vladislav"',
+                name: 'И Я указываю имя "Daria"',
                 multiLineStrings: <String>[],
                 table: null,
                 dependencies: dependencies,
@@ -91,7 +91,7 @@ class _CustomGherkinIntegrationTestRunner extends GherkinIntegrationTestRunner {
               bool skip,
             ) async {
               return await runStep(
-                name: 'И Я указываю отчество "Vladimirovich"',
+                name: 'И Я указываю отчество "Evgenevna"',
                 multiLineStrings: <String>[],
                 table: null,
                 dependencies: dependencies,
@@ -139,7 +139,7 @@ class _CustomGherkinIntegrationTestRunner extends GherkinIntegrationTestRunner {
               bool skip,
             ) async {
               return await runStep(
-                name: 'И Я выбираю "Sleep" из интересов',
+                name: 'И Я выбираю "Photo" из интересов',
                 multiLineStrings: <String>[],
                 table: null,
                 dependencies: dependencies,
@@ -163,7 +163,7 @@ class _CustomGherkinIntegrationTestRunner extends GherkinIntegrationTestRunner {
               bool skip,
             ) async {
               return await runStep(
-                name: 'И Я заполняю заметку о себе "Тестовая заметка о себе"',
+                name: 'И Я заполняю заметку о себе "Test"',
                 multiLineStrings: <String>[],
                 table: null,
                 dependencies: dependencies,
